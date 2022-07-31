@@ -14,11 +14,14 @@ class Estudiante(models.Model):
     email = models.EmailField()
 
 class Profesor(models.Model):
+    def __str__(self):
+        return f"Nombre: {self.nombre} - Apellido {self.apellido} - Email {self.email} - Profesion {self.profession}"
 
     nombre = models.CharField(max_length = 40)
     apellido = models.CharField(max_length = 40)
     email = models.EmailField()
     profession = models.CharField(max_length = 40)
+    
 
 class Entregable(models.Model):
 

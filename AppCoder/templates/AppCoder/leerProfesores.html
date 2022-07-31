@@ -1,0 +1,14 @@
+<body>
+
+    {% for p in profesores%}
+        <li>{{p}}</li>
+
+        <button>
+            <a href="{% url 'EliminarProfesor' p.nombre %}"> Eliminar </a>
+            <a href="{% url 'EditarProfesor' p.nombre %}"> Editar </a>
+        </button>
+
+    {% endfor %}
+
+    <a href="profesores"> Agregar otro profesor</a>
+</body>
